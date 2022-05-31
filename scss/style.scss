@@ -1,0 +1,132 @@
+/* Primary Colors */
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGrayeshBlue: hsl(227, 10%, 46%);
+
+/* Natural Colors */
+$darkGrey: hsl(0, 0%, 59%);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $darkCyan;
+  overflow: hidden;
+}
+
+.container {
+  font-family: Kumbh Sans, sans-serif;
+  width: 20rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  border-radius: 1em;
+}
+.patternBottom {
+  position: absolute;
+  bottom: -100%;
+  right: -25%;
+  z-index: -10;
+
+  @media screen and (max-width: 375px) {
+    right: -190%;
+  }
+}
+.patternTop {
+  position: absolute;
+  top: -100%;
+  left: -25%;
+  z-index: -10;
+  @media screen and (max-width: 375px) {
+    left: -190%;
+  }
+}
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 2;
+  border-top: 1px solid #ddd;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.info .item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: $veryDarkDesaturatedBlue;
+}
+.info .item span {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $darkGrayeshBlue;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.wraper {
+  width: 100%;
+  flex: 6;
+  position: relative;
+}
+.wraper .image {
+  width: 100%;
+  height: 50%;
+  background: url(../images/bg-pattern-card.svg);
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+}
+.wraper .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.25em solid #fff;
+  border-radius: 50%;
+}
+.wraper .details {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.details {
+  text-align: center;
+}
+.details h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: $veryDarkDesaturatedBlue;
+}
+.details span {
+  font-size: 18px;
+  margin-left: 0.5rem;
+  font-weight: 400;
+  color: $darkGrayeshBlue;
+}
+.details p {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: $darkGrayeshBlue;
+}
